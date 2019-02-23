@@ -28,6 +28,9 @@ const styles = StyleSheet.create({
     height: "3%",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f8f8f8"
+    backgroundColor: "#f8f8f8",
+    padding: 5,
+    margin: 5,
+    borderBottomWidth: 3
   }
 });

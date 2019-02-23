@@ -6,16 +6,20 @@ import AlbumList from "./src/components/AlbumList";
 
 export default class App extends React.Component {
   state = {
-    header: "Albums!"
+    header: "Albums!",
+    preload: false
   };
-
+  setHeader = () => {
+    this.setState({preload: true});
+  }
   render() {
+    
     return (
       <ScrollView >
-        <View style={{ flex: 1 }}>
-          <Header headerText={this.state.header} />
+        <View style={{backgroundColor: "black"}}>
+          {this.state.preload && <Header headerText={this.state.header} />}
 
-          <AlbumList />
+          <AlbumList setHeader={this.setHeader}/>
         </View>
       </ScrollView>
     );
